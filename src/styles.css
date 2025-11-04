@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100vw;
+    max-height: 100vh;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20vw 1fr;
+    grid-template-rows: auto;
+    /*gap: 20px;*/
+}
+
+.projects {
+    /*justify-items: center;
+    align-items: center;*/
+    background: linear-gradient(135deg, blue, violet);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr;
+}
+
+.project-top {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+    margin: 10px;
+}
+
+#new-project{
+    border: rgb(207, 198, 198) solid 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgba(156, 154, 154, 0.5);
+    color: white;
+}
+
+#new-project:hover {
+    background: rgba(223, 221, 221, 0.5);
+}
+
+.projects h2{
+    margin: 0px;
+    color: aliceblue;
+}
+
+.project-list {
+    margin-top: 70px;
+}
+
+.project-item{
+    padding: 10px;
+    margin: 10px;
+    border: black solid 1px;
+    cursor: pointer;
+}
+
+.project-item:hover {
+    background: #0940d7;
+}
+
+.project-item.active {
+    background: #0940d7;
+}
+
+.tasks {
+    background: white;
+    padding: 10px;
+    /*justify-items: center;*/
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% auto;
+    background: rgb(243, 240, 240);
+}
+
+.task-top {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    background: blue;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#new-task {
+    margin: 0 20px 0 0;
+    padding: 10px;
+    border: rgb(207, 198, 198) solid 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgba(170, 168, 168, 0.5);
+    color: white;
+}
+
+#new-task:hover {
+    background: rgba(230, 226, 226, 0.5);
+}
+
+.task-box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: min-content;
+    gap: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow:
+                -4px 0 4px -2px rgba(0, 0, 0, 0.3),  /* left */
+                4px 0 4px -2px rgba(0, 0, 0, 0.3),  /* right */
+                0 4px 4px -2px rgba(0, 0, 0, 0.3);  /* bottom */
+}
+
+.task-line {
+    border: black solid 1px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+    align-items: center;
+    cursor: pointer;
+    /*justify-items: center;*/
+}
+
+.task-line:hover {
+    background: rgb(237, 236, 236);
+}
+
+.tasks h2{
+    margin: 20px;
+}
+
+.fa-solid {
+    font-size: 20px;
+}
+.fa-trash {
+    color: #e60f0f;
+}
+
+.fa-trash:hover {
+    color: #c52121;
+}
+
+.left {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.full-description {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+}
+
+.empty {
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+
+.description {
+    margin-top: 10px;
+    border-top: rgb(196, 190, 190) solid 1px;
+}
+
+.right {
+    margin: 10px 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 15px;
+}
+
+.fa-play {
+    transition: transform 0.3s ease;
+    color: rgb(146, 144, 144);
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    margin: 10px;
+}
+
+.priority {
+    color: rgb(190, 118, 9);
+    background: rgb(232, 217, 130);
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.due::before {
+    content: "📅";
+}
+
+
+form input {
+    margin-left: 10px;
+}
+
+#popup {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 100px;
+    left: 500px;
+}
+
+#popup form{
+    padding: 10px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr auto;
+    justify-items: center;
+}
+
+
+.form-row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    padding: 10px;
+}
+
+button[id="close"] {
+    padding: 10px;
+    background: rgb(122, 122, 135);
+    color: aliceblue;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#project-popup {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    padding: 10px;
+}
+
+#project-popup form {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    justify-items: center;
+}
+
+#submit-project {
+    height: 30px;
+    width: 60px;
+    background: rgb(139, 139, 163);
+    color: aliceblue;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}

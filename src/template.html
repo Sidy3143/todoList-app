@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Todo List</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="projects">
+                <div class="project-top">
+                    <h2>Projects</h2>
+                    <button id="new-project">+ Add Project</button>
+                </div>
+                <dialog id="project-popup">
+                    <form>
+                        <div>
+                            <label for="input-project">Enter Project Name:</label>
+                            <input type="text" id="input-project">
+                        </div>
+                        <button type="button" id="submit-project">Submit</button>
+                    </form>
+                </dialog>
+                <div class="project-list">
+                    <!-- <div class="project-item" data-index=0>Project 1 Name</div>
+                    <div class="project-item" data-index=1>Project 2 Name</div>-->
+                </div>
+            </div>
+            <div class="tasks">
+                <div class="task-top">
+                    <h2>Tasks</h2>
+                    <button id="new-task">+ Add New Task</button>
+                </div>
+                <div class="task-box">
+
+                    <!--<div class="task-line">
+                        <div class="left">
+                            <input type="checkbox" class="completed">
+                            <div class="task-detail">
+                                <h3 class="task-title">Task 1</h3>
+                                <p class="task-short-description">Complete the todo list project </p>
+                            </div>   
+                        </div>
+                        <div class="right">
+                            <p class="priority">MEDIUM</p>
+                            <p class="due">Due tomorrow</p>
+                            <i class="fa-solid fa-play"></i>     
+                            <i class="fa-solid fa-trash"></i>  
+                        </div>
+                        <div class="full-description">
+                            <div class="empty"></div>
+                            <div class="description">
+                                <h3>Full description</h3>
+                                <p class="description-text">Review all project requirements, gather feedback from stakeholders, and finalize the proposal document for client presentation. 
+                                    Include budget estimates and timeline.</p>
+                            </div>
+                        </div>
+                    </div> -->
+                    
+                </div>
+                <dialog id="popup">
+                    <form>
+                        <div class="input-form">
+                            <div class="form-row">
+                                <label for="input-task">Task: </label>
+                                <input type="text" id="input-task" placeholder="e.g: go to the gym">
+                            </div>
+                            <div class="form-row">
+                                <label for="input-description">Description: </label>
+                                <textarea type="text" id="input-description" placeholder="Task description..."></textarea>
+                            </div>
+                            <div class="form-row">
+                                <label for="short-description">Short Description: </label>
+                                <textarea type="text" id="short-description" placeholder="Short description..."></textarea>
+                            </div>
+                            <div class="form-row">
+                                <label for="input-priority">Priority: </label>
+                                <select id="input-priority">
+                                    <option selected>HIGH</option>
+                                    <option>MEDIUM</option>
+                                    <option>LOW</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <label for="input-deadline">Due Date: </label>
+                                <input type="date" id="input-deadline">
+                            </div>
+                        </div>
+                        <button type="button" id="close">Submit</button>
+                    </form>
+                </dialog>
+            </div>
+        </div>
+    </body>
+</html>
